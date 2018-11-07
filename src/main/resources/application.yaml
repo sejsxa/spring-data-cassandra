@@ -1,0 +1,30 @@
+#  cluster-name= # Name of the Cassandra cluster.
+#  compression=none # Compression supported by the Cassandra binary protocol.
+#  connect-timeout= # Socket option: connection time out.
+#  consistency-level= # Queries consistency level.
+#  contact-points=localhost # Cluster node addresses.
+#  fetch-size= # Queries default fetch size.
+#  jmx-enabled=false # Whether to enable JMX reporting.
+#  keyspace-name= # Keyspace name to use.
+#  port= # Port of the Cassandra server.
+#  password= # Login password of the server.
+#  pool.heartbeat-interval=30s # Heartbeat interval after which a message is sent on an idle connection to make sure it's still alive. If a duration suffix is not specified, seconds will be used.
+#  pool.idle-timeout=120s # Idle timeout before an idle connection is removed. If a duration suffix is not specified, seconds will be used.
+#  pool.max-queue-size=256 # Maximum number of requests that get queued if no connection is available.
+#  pool.pool-timeout=5000ms # Pool timeout when trying to acquire a connection from a host's pool.
+#  read-timeout= # Socket option: read time out.
+#  repositories.type=auto # Type of Cassandra repositories to enable.
+#  serial-consistency-level= # Queries serial consistency level.
+#  schema-action=none # Schema action to take at startup.
+#  ssl=false # Enable SSL support.
+#  username= # Login user of the server.
+
+spring:
+  data:
+    cassandra:
+      contact-points: localhost
+      username: test
+      password: 1234
+      keyspace-name: test
+      schema-action: create_if_not_exists
+
